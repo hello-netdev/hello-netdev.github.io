@@ -5,83 +5,87 @@
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/acl/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_acl/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/acl/adv/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_acl/adv/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/acl/basic/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_acl/basic/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/cyber_security/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_cyber_security/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/cyber_security/port_isolation/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_cyber_security/port_isolation/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/cyber_security/port_security/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_cyber_security/port_security/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/nat/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_hello_netdev/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/nat/dynamic%26pat/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_nat/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/nat/static/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_nat/dynamic%26pat/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/route/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_nat/static/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/route/dynamic_routing/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_route/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/route/static_routing/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_route/dynamic_routing/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/stp/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_route/static_routing/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/stp/basics/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_stp/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/vlan/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_stp/basics/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/vlan/comm/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_vlan/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/vlan/create/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_vlan/comm/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/vlan/gvrp/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_vlan/create/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/vlan/interface/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_vlan/gvrp/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
     <url>
-         <loc>https://hello-netdev.littlesirius.top/vlan/link_aggregation/</loc>
+         <loc>https://hello-netdev.littlesirius.top/chapter_vlan/interface/</loc>
+         <lastmod>2024-11-23</lastmod>
+    </url>
+    <url>
+         <loc>https://hello-netdev.littlesirius.top/chapter_vlan/link_aggregation/</loc>
          <lastmod>2024-11-23</lastmod>
     </url>
 </urlset>

@@ -12,24 +12,28 @@
         <meta name="author" content="Xiao-Jiang-233">
       
       
-        <link rel="canonical" href="https://hello-netdev.littlesirius.top/">
+        <link rel="canonical" href="https://hello-netdev.littlesirius.top/chapter_acl/adv/">
       
       
+        <link rel="prev" href="../basic/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+        <link rel="next" href="../../chapter_nat/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
     
     
       
-        <title>Hello Netdev</title>
+        <title>6.2   高级ACL - Hello Netdev</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,16 +52,16 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -66,7 +70,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -85,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#net-device-scee" class="md-skip">
+        <a href="#acl" class="md-skip">
           跳转至
         </a>
       
@@ -101,7 +105,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="." title="Hello Netdev" class="md-header__button md-logo" aria-label="Hello Netdev" data-md-component="logo">
+    <a href="../.." title="Hello Netdev" class="md-header__button md-logo" aria-label="Hello Netdev" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -121,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Net-Device-SCEE
+              6.2 &nbsp; 高级ACL
             
           </span>
         </div>
@@ -241,7 +245,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Hello Netdev" class="md-nav__button md-logo" aria-label="Hello Netdev" data-md-component="logo">
+    <a href="../.." title="Hello Netdev" class="md-nav__button md-logo" aria-label="Hello Netdev" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -289,7 +293,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="chapter_hello_netdev/" class="md-nav__link ">
+            <a href="../../chapter_hello_netdev/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -350,7 +354,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="chapter_vlan/" class="md-nav__link ">
+            <a href="../../chapter_vlan/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -383,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="chapter_vlan/create/" class="md-nav__link">
+      <a href="../../chapter_vlan/create/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -404,7 +408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="chapter_vlan/interface/" class="md-nav__link">
+      <a href="../../chapter_vlan/interface/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -425,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="chapter_vlan/comm/" class="md-nav__link">
+      <a href="../../chapter_vlan/comm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -446,7 +450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="chapter_vlan/gvrp/" class="md-nav__link">
+      <a href="../../chapter_vlan/gvrp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -494,7 +498,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="chapter_stp/" class="md-nav__link ">
+            <a href="../../chapter_stp/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -527,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="chapter_stp/basics/" class="md-nav__link">
+      <a href="../../chapter_stp/basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -577,7 +581,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="chapter_route/" class="md-nav__link ">
+            <a href="../../chapter_route/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -610,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="chapter_route/static_routing/" class="md-nav__link">
+      <a href="../../chapter_route/static_routing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="chapter_route/dynamic_routing/" class="md-nav__link">
+      <a href="../../chapter_route/dynamic_routing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -681,7 +685,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="chapter_cyber_security/" class="md-nav__link ">
+            <a href="../../chapter_cyber_security/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -714,7 +718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="chapter_cyber_security/port_isolation/" class="md-nav__link">
+      <a href="../../chapter_cyber_security/port_isolation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -735,7 +739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="chapter_cyber_security/port_security/" class="md-nav__link">
+      <a href="../../chapter_cyber_security/port_security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -760,6 +764,8 @@
       
   
   
+    
+  
   
   
     
@@ -776,16 +782,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="chapter_acl/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -802,7 +808,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             第 6 章 &nbsp; ACL
@@ -818,7 +824,7 @@
   
   
     <li class="md-nav__item">
-      <a href="chapter_acl/basic/" class="md-nav__link">
+      <a href="../basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -836,10 +842,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="chapter_acl/adv/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -848,6 +863,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -889,7 +905,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="chapter_nat/" class="md-nav__link ">
+            <a href="../../chapter_nat/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -922,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="chapter_nat/static/" class="md-nav__link">
+      <a href="../../chapter_nat/static/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -943,7 +959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="chapter_nat/dynamic%26pat/" class="md-nav__link">
+      <a href="../../chapter_nat/dynamic%26pat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="print_page/" class="md-nav__link">
+      <a href="../../print_page/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1024,7 +1040,7 @@
 <!-- Edit button -->
 
 <a
-  href="https://github.com/Xiao-Jiang-233/hello-netdev/tree/main/docs/index.md"
+  href="https://github.com/Xiao-Jiang-233/hello-netdev/tree/main/docs/chapter_acl/adv.md"
   title="编辑此页"
   class="md-content__button md-icon"
 >
@@ -1036,8 +1052,27 @@
  
 
 <!-- Page content -->
-<h1 id="net-device-scee"><center class="force-page-break">Net-Device-SCEE</center><a class="headerlink" href="#net-device-scee" title="Permanent link">&para;</a></h1>
-<p>春季高考网络技术代码速记</p>
+<h1 id="acl">高级ACL<a class="headerlink" href="#acl" title="Permanent link">&para;</a></h1>
+<div class="language-execline highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[Huawei]acl 3000 <span class="c1"># 高级ACL的范围为3000-3999</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>[Huawei-acl-adv-3000]rule permit ip source 192.168.1.0 0.0.0.255 destination 192.168.2.0 0.0.0.255
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># 允许1.0网段访问2.0网段</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>[Huawei-acl-adv-3000]rule permit udp source 192.168.3.1 0 destination 192.168.4.1 0 destination-port eq 80
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># 允许3.1主机访问4.1服务器上的web服务</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>[Huawei-acl-adv-3000]rule deny tcp source 192.168.2.0 0.0.0.255 destination 192.168.3.1 0 destination-port rang 20 21
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># 拒绝2.0网段访问3.1服务器上的ftp服务</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Huawei-acl-adv-3000]rule deny icmp source 192.168.3.1 0 destination 192.168.5.1 0
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1"># 拒绝3.1主机ping通5.1主机</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>[Huawei-acl-adv-3000]int g 0/0/1
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>[Huawei-GigabitEthernet0/0/1]traffic-filter acl 3000
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ol>
+<li>高级ACL应在靠近目的端口上配置</li>
+<li>协议常用的有 <code>ip</code>, <code>tcp</code>, <code>icmp</code>, <code>udp</code></li>
+<li><code>destination-port</code>后的比较符有<code>rang</code>(范围), <code>eq</code>(等于), <code>gt</code>(大于), <code>lt</code>(等于)</li>
+</ol>
+</div>
 
 <!-- Source file information -->
 
@@ -1054,9 +1089,39 @@
   
 >
   <!-- Link to previous page -->
+   
+  <a
+    href="../basic/"
+    class="md-footer__link md-footer__link--prev"
+    aria-label="上一页: 6.1 &amp;nbsp; 基本ACL"
+    rel="prev"
+  >
+    <div class="md-footer__button md-icon">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+    </div>
+    <div class="md-footer__title">
+      <span class="md-footer__direction"> 上一页 </span>
+      <div class="md-ellipsis">6.1 &nbsp; 基本ACL</div>
+    </div>
+  </a>
   
 
   <!-- Link to next page -->
+   
+  <a
+    href="../../chapter_nat/"
+    class="md-footer__link md-footer__link--next"
+    aria-label="下一页: NAT（Network Address Translation）"
+    rel="next"
+  >
+    <div class="md-footer__title">
+      <span class="md-footer__direction"> 下一页 </span>
+      <div class="md-ellipsis">NAT（Network Address Translation）</div>
+    </div>
+    <div class="md-footer__button md-icon">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+    </div>
+  </a>
   
 </nav>
 
@@ -1082,6 +1147,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../basic/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 6.1 &amp;nbsp; 基本ACL">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                6.1 &nbsp; 基本ACL
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../chapter_nat/" class="md-footer__link md-footer__link--next" aria-label="下一页: NAT（Network Address Translation）">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                NAT（Network Address Translation）
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1125,12 +1228,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["announce.dismiss", "content.action.edit", "content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
-        <script src="js/print-site.js"></script>
+        <script src="../../js/print-site.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": false, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "none"});
