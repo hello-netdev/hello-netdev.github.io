@@ -7,6 +7,7 @@ $scriptDir = Split-Path $scriptPath
 # 设置当前目录为脚本目录
 Set-Location $scriptDir
 
-mkdocs gh-deploy --config-file ../hello-netdev/mkdocs.yml
+git submodule update --remote
+mkdocs gh-deploy --config-file ./hello-netdev/mkdocs.yml
 git reset
 git clean -fd
