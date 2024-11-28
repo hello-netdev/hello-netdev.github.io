@@ -1,0 +1,3 @@
+[submodule "hello-netdev"]
+	path = hello-netdev
+	url = https://github.com/Xiao-Jiang-233/hello-netdev.git
