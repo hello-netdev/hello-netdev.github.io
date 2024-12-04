@@ -12,13 +12,13 @@
         <meta name="author" content="Xiao-Jiang-233">
       
       
-        <link rel="canonical" href="https://hello-netdev.littlesirius.top/chapter_route/static_routing/">
+        <link rel="canonical" href="https://hello-netdev.littlesirius.top/chapter_vlan/port_configuration/">
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../create_vlan/">
       
       
-        <link rel="next" href="../dynamic_routing/">
+        <link rel="next" href="../inter-vlan_communication/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>4.1   静态路由 - Hello Netdev</title>
+        <title>2.2   VLAN端口配置 - Hello Netdev</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#static-routing" class="md-skip">
+        <a href="#vlan" class="md-skip">
           跳转至
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4.1 &nbsp; 静态路由
+              2.2 &nbsp; VLAN端口配置
             
           </span>
         </div>
@@ -325,6 +325,8 @@
       
   
   
+    
+  
   
   
     
@@ -349,16 +351,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../chapter_vlan/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -375,7 +377,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             第 2 章 &nbsp; VLAN
@@ -391,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter_vlan/create_vlan/" class="md-nav__link">
+      <a href="../create_vlan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -409,10 +411,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../chapter_vlan/port_configuration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2.2 &nbsp; VLAN端口配置
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -421,6 +443,110 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用实例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用实例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置接入端口 (Access port)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trunk-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置干道端口 (Trunk port)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      批量配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      接入端口改为干道端口
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      干道端口改为接入端口
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -433,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter_vlan/inter-vlan_communication/" class="md-nav__link">
+      <a href="../inter-vlan_communication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -454,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter_vlan/link_aggregation/" class="md-nav__link">
+      <a href="../link_aggregation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -475,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter_vlan/gvrp/" class="md-nav__link">
+      <a href="../gvrp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -496,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter_vlan/port_group/" class="md-nav__link">
+      <a href="../port_group/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -602,8 +728,6 @@
       
   
   
-    
-  
   
   
     
@@ -620,16 +744,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../chapter_route/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -646,7 +770,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             第 4 章 &nbsp; 路由
@@ -659,30 +783,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    4.1 &nbsp; 静态路由
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../chapter_route/static_routing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -691,35 +795,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#default-route" class="md-nav__link">
-    <span class="md-ellipsis">
-      默认路由（Default route）
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -732,7 +807,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dynamic_routing/" class="md-nav__link">
+      <a href="../../chapter_route/dynamic_routing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1112,11 +1187,86 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#default-route" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      默认路由（Default route）
+      配置命令
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用实例
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用实例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置接入端口 (Access port)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trunk-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置干道端口 (Trunk port)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      其他操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="其他操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      批量配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      接入端口改为干道端口
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      干道端口改为接入端口
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1142,7 +1292,7 @@
 <!-- Edit button -->
 
 <a
-  href="https://github.com/Xiao-Jiang-233/hello-netdev/tree/main/docs/chapter_route/static_routing.md"
+  href="https://github.com/Xiao-Jiang-233/hello-netdev/tree/main/docs/chapter_vlan/port_configuration.md"
   title="编辑此页"
   class="md-content__button md-icon"
 >
@@ -1154,28 +1304,131 @@
  
 
 <!-- Page content -->
-<h1 id="static-routing">静态路由（Static routing）<a class="headerlink" href="#static-routing" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>静态路由是做非直连网段的</p>
-</div>
-<div class="language-execline highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[Huawei]ip route-static 192.168.100.0 255.255.255.0 192.168.10.2
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">#                       (目的子网号)    (目的子网掩码)  (下一条地址)</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>[Huawei]ip route-static 192.168.200.0 255.255.255.0 g0/0/0
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">#                       (目的子网号)    (目的子网掩码)  (出端口)</span>
+<h1 id="vlan">VLAN 端口配置<a class="headerlink" href="#vlan" title="Permanent link">&para;</a></h1>
+<h2 id="_1">配置命令<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>port</strong> <strong>link-type</strong> { <strong>access</strong> | <strong>hybrid</strong> | <strong>trunk</strong> } : 命令用来配置接口的链路类型。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>access</strong></td>
+<td>配置接口的链路类型为 Access。</td>
+</tr>
+<tr>
+<td><strong>hybrid</strong></td>
+<td>配置接口的链路类型为 Hybrid。</td>
+</tr>
+<tr>
+<td><strong>trunk</strong></td>
+<td>配置接口的链路类型为 Trunk。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>port</strong> <strong>default</strong> <strong>vlan</strong> <em>vlan-id</em> : 命令用来配置接口的缺省 VLAN 并同时加入这个 VLAN。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>vlan-id</em></td>
+<td>配置缺省 VLAN 的编号。</td>
+<td>整数形式，取值范围是 1 ～ 4094。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>port</strong> <strong>trunk</strong> <strong>allow-pass</strong> <strong>vlan</strong> { { <em>vlan-id1</em> [ <strong>to</strong> vlan-id2 ] }&amp;&lt;1-10&gt; | <strong>all</strong>} : 命令用来配置 Trunk 类型接口加入的 VLAN。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>vlan-id1</em> [ <strong>to</strong> vlan-id2 ]</td>
+<td>指定 Trunk 类型接口加入的 VLAN，其中：<ul> <li> <em>vlan-id1</em> 表示第一个 VLAN 的编号。</li> <li> <strong>to</strong> <em>vlan-id2</em> 表示最后一个 VLAN 的编号。 <em>vlan-id2</em> 的取值必须大于等于 <em>vlan-id1</em> 的取值。</li> </ul></td>
+<td><em>vlan-id1</em> 为整数形式，取值范围是 1 ～ 4094。<br><em>vlan-id2</em> 为整数形式，取值范围是 1 ～ 4094。</td>
+</tr>
+<tr>
+<td><strong>all</strong></td>
+<td>指定 Trunk 接口加入所有 VLAN。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">使用实例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="access-port">配置接入端口 (Access port)<a class="headerlink" href="#access-port" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[Huawei]interface GigabitEthernet 0/0/1
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>[Huawei-GigabitEthernet0/0/1]port link-type access
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>[Huawei-GigabitEthernet0/0/1]port default vlan 100
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>[Huawei-GigabitEthernet0/0/1]
 </span></code></pre></div>
-<div class="admonition tip">
-<ol>
-<li>是目的<strong>子网掩码</strong>，而不是<i>反码</i> ！！！</li>
-<li>在串行接口（serial）上，无法使用下一条地址，只能使用<strong>出端口</strong></li>
-<li>这是串行接口链路：RA------------------------------RB</li>
-</ol>
-</div>
-<h2 id="default-route">默认路由（Default route）<a class="headerlink" href="#default-route" title="Permanent link">&para;</a></h2>
-<div class="admonition abstract">
-<p>默认路由是一种特殊的静态路由</p>
-</div>
-<div class="language-execline highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[Huawei]ip route-static 0.0.0.0 0.0.0.0 192.168.10.2
+<h3 id="trunk-port">配置干道端口 (Trunk port)<a class="headerlink" href="#trunk-port" title="Permanent link">&para;</a></h3>
+<p><strong>情况 1:</strong> allow all</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[Huawei]interface GigabitEthernet 0/0/24
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>[Huawei-GigabitEthernet0/0/24]port link-type trunk
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>[Huawei-GigabitEthernet0/0/24]port trunk allow-pass vlan all
+</span></code></pre></div>
+<p><strong>情况 2:</strong> allow 部分 Vlan</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[Huawei]interface GigabitEthernet 0/0/24
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>[Huawei-GigabitEthernet0/0/24]port link-type trunk
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>[Huawei-GigabitEthernet0/0/24]port trunk allow-pass vlan 100 to 200
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>[Huawei-GigabitEthernet0/0/24]port trunk allow-pass vlan 300 350
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>[Huawei-GigabitEthernet0/0/24]dis this
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>#
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>interface GigabitEthernet0/0/24
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a> port link-type trunk
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a> port trunk allow-pass vlan 100 to 200 300 350
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>#
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>return
+</span></code></pre></div>
+<h2 id="_3">其他操作<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">批量配置<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p><a href="/chapter_vlan/port_group">port-group 使用方法</a></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>[Huawei]port-group group-member g0/0/5 to g0/0/10
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>[Huawei-port-group]port link-type access
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a># 设备将自动配置:
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>[Huawei-GigabitEthernet0/0/5]port link-type access
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>[Huawei-GigabitEthernet0/0/6]port link-type access
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>[Huawei-GigabitEthernet0/0/7]port link-type access
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>[Huawei-GigabitEthernet0/0/8]port link-type access
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>[Huawei-GigabitEthernet0/0/9]port link-type access
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>[Huawei-GigabitEthernet0/0/10]port link-type access
+</span></code></pre></div>
+<h3 id="_5">接入端口改为干道端口<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>[Huawei-GigabitEthernet0/0/1]undo port default vlan
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>[Huawei-GigabitEthernet0/0/1]undo port link-type
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>[Huawei-GigabitEthernet0/0/1]Port link-type trunk
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>[Huawei-GigabitEthernet0/0/1]dis this
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>#
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>interface GigabitEthernet0/0/1
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a> port link-type trunk
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>#
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>return
+</span></code></pre></div>
+<h3 id="_6">干道端口改为接入端口<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>[Huawei-GigabitEthernet0/0/24]undo port trunk allow-pass vlan all
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>[Huawei-GigabitEthernet0/0/24]port trunk allow-pass vlan 1 # 注意！
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>[Huawei-GigabitEthernet0/0/24]undo port link-type
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>[Huawei-GigabitEthernet0/0/24]port link-type access
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>[Huawei-GigabitEthernet0/0/24]display this
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>#
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>interface GigabitEthernet0/0/24
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a> port link-type access
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>#
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>return
 </span></code></pre></div>
 
 <!-- Source file information -->
@@ -1195,9 +1448,9 @@
   <!-- Link to previous page -->
    
   <a
-    href="../"
+    href="../create_vlan/"
     class="md-footer__link md-footer__link--prev"
-    aria-label="上一页: 路由（Route）"
+    aria-label="上一页: 2.1 &amp;nbsp; 创建 VLAN"
     rel="prev"
   >
     <div class="md-footer__button md-icon">
@@ -1205,7 +1458,7 @@
     </div>
     <div class="md-footer__title">
       <span class="md-footer__direction"> 上一页 </span>
-      <div class="md-ellipsis">路由（Route）</div>
+      <div class="md-ellipsis">2.1 &nbsp; 创建 VLAN</div>
     </div>
   </a>
   
@@ -1213,14 +1466,14 @@
   <!-- Link to next page -->
    
   <a
-    href="../dynamic_routing/"
+    href="../inter-vlan_communication/"
     class="md-footer__link md-footer__link--next"
-    aria-label="下一页: 4.2 &amp;nbsp; 动态路由"
+    aria-label="下一页: 2.3 &amp;nbsp; VLAN间通信"
     rel="next"
   >
     <div class="md-footer__title">
       <span class="md-footer__direction"> 下一页 </span>
-      <div class="md-ellipsis">4.2 &nbsp; 动态路由</div>
+      <div class="md-ellipsis">2.3 &nbsp; VLAN间通信</div>
     </div>
     <div class="md-footer__button md-icon">
        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
@@ -1230,6 +1483,57 @@
 </nav>
 
 <!-- Comment system -->
+
+
+<h5 align="center" id="__comments">欢迎在评论区留下你的见解、问题或建议</h5>
+
+<!-- Insert generated snippet here -->
+<script
+  src="https://giscus.app/client.js"
+  data-repo="Xiao-Jiang-233/hello-netdev"
+  data-repo-id="R_kgDONQGGag"
+  data-category="Announcements"
+  data-category-id="DIC_kwDONQGGas4CkUwD"
+  data-mapping="pathname"
+  data-strict="1"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="light"
+  data-lang="zh-CN"
+  crossorigin="anonymous"
+  async
+></script>
+
+<!-- Synchronize Giscus theme with palette -->
+<script>
+  var giscus = document.querySelector("script[src*=giscus]");
+
+  /* Set palette on initial load */
+  var palette = __md_get("__palette");
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate" ? "dark_dimmed" : "light";
+    giscus.setAttribute("data-theme", theme);
+  }
+
+  /* Register event handlers after documented loaded */
+  document.addEventListener("DOMContentLoaded", function () {
+    var ref = document.querySelector("[data-md-component=palette]");
+    ref.addEventListener("change", function () {
+      var palette = __md_get("__palette");
+      if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark_dimmed" : "light";
+
+        /* Instruct Giscus to change theme */
+        var frame = document.querySelector(".giscus-frame");
+        frame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme } } },
+          "https://giscus.app"
+        );
+      }
+    });
+  });
+</script>
 
                 
               </article>
@@ -1256,7 +1560,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 路由（Route）">
+          <a href="../create_vlan/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 2.1 &amp;nbsp; 创建 VLAN">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1266,20 +1570,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                路由（Route）
+                2.1 &nbsp; 创建 VLAN
               </div>
             </div>
           </a>
         
         
           
-          <a href="../dynamic_routing/" class="md-footer__link md-footer__link--next" aria-label="下一页: 4.2 &amp;nbsp; 动态路由">
+          <a href="../inter-vlan_communication/" class="md-footer__link md-footer__link--next" aria-label="下一页: 2.3 &amp;nbsp; VLAN间通信">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                4.2 &nbsp; 动态路由
+                2.3 &nbsp; VLAN间通信
               </div>
             </div>
             <div class="md-footer__button md-icon">
