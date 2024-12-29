@@ -12,17 +12,21 @@
         <meta name="author" content="Xiao-Jiang-233">
       
       
-        <link rel="canonical" href="https://hello-netdev.littlesirius.top/chapter_stp/basics/">
+        <link rel="canonical" href="https://hello-netdev.littlesirius.top/chapter_stp/basic_operations/">
       
       
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../chapter_route/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.47">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>STP基础操作 - Hello Netdev</title>
+        <title>3.1   STP基础操作 - Hello Netdev</title>
       
     
     
@@ -121,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              STP基础操作
+              3.1 &nbsp; STP基础操作
             
           </span>
         </div>
@@ -517,6 +521,8 @@
       
   
   
+    
+  
   
   
     
@@ -531,11 +537,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           
@@ -557,7 +563,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             第 3 章 &nbsp; STP
@@ -570,10 +576,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../basic_operations.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3.1 &nbsp; STP基础操作
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -582,6 +608,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置命令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="配置命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      STP 工作模式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stp_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      STP 设备优先级
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stp_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      STP 端口开销
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用实例
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1059,7 +1165,58 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      协议配置
+      配置命令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="配置命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      STP 工作模式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stp_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      STP 设备优先级
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stp_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      STP 端口开销
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用实例
     </span>
   </a>
   
@@ -1087,7 +1244,7 @@
 <!-- Edit button -->
 
 <a
-  href="https://github.com/Xiao-Jiang-233/hello-netdev/tree/main/docs/chapter_stp/basics.md"
+  href="https://github.com/Xiao-Jiang-233/hello-netdev/tree/main/docs/chapter_stp/basic_operations.md"
   title="编辑此页"
   class="md-content__button md-icon"
 >
@@ -1099,35 +1256,111 @@
  
 
 <!-- Page content -->
-<h1 id="stp">STP基础操作<a class="headerlink" href="#stp" title="Permanent link">&para;</a></h1>
-<h2 id="_1">协议配置<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>修改模式:</p>
-<div class="language-execline highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[Huawei]stp mode ?
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  mstp  Multiple Spanning Tree Protocol (MSTP) mode
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  rstp  Rapid Spanning Tree Protocol (RSTP) mode
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  stp   Spanning Tree Protocol (STP) mod
+<h1 id="stp">STP 基础操作<a class="headerlink" href="#stp" title="Permanent link">&para;</a></h1>
+<h2 id="_1">配置命令<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="stp_1">STP 工作模式<a class="headerlink" href="#stp_1" title="Permanent link">&para;</a></h3>
+<p><strong>stp</strong> <strong>mode</strong> { <strong>mstp</strong> | <strong>rstp</strong> | <strong>stp</strong> } : 用来配置交换设备的生成树协议工作模式。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>mstp</strong></td>
+<td>指定MSTP模式。</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>rstp</strong></td>
+<td>指定RSTP模式。</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>stp</strong></td>
+<td>指定STP模式。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="stp_2">STP 设备优先级<a class="headerlink" href="#stp_2" title="Permanent link">&para;</a></h3>
+<p><strong>stp</strong> <strong>priority</strong> <em>priority</em> : 用来配置交换设备在指定生成树中的优先级。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>priority</strong></td>
+<td>指定交换设备的优先级数值。<br />优先级值越小，则交换设备的优先级越高。</td>
+<td>整数形式，取值范围是0～61440，步长为4096，如0、4096、8192等。缺省值是32768。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>stp</strong> <strong>root</strong> { <strong>primary</strong> | <strong>secondary</strong> } : 用来配置当前交换设备为指定生成树的根桥或备份根桥。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>primary</strong></td>
+<td>指定配置为生成树的根桥设备。</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>secondary</strong></td>
+<td>指定配置为生成树的备份根桥设备。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="stp_3">STP 端口开销<a class="headerlink" href="#stp_3" title="Permanent link">&para;</a></h3>
+<p><strong>stp</strong> <strong>cost</strong> <em>cost</em> : 用来配置当前端口在指定生成树上的端口路径开销。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>cost</strong></td>
+<td>指定端口路径开销。</td>
+<td>取值范围由路径开销计算方法决定： <ul>  <li>使用华为计算方法时取值范围是1～200,000 </li>  <li>使用IEEE 802.1d-1998标准方法时取值范围是1～65535 </li>  <li>使用IEEE 802.1t标准方法时取值范围是1～200,000,000 </li></ul></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">注意事项<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>在 <strong>eNSP</strong> 中，默认使用 <strong>IEEE 802.1t</strong> 标准来计算端口开销。</p>
+<p><strong>Ethernet</strong> 端口为 <strong><code>200000</code></strong> , <strong>GigabitEthernet</strong> 端口为 <strong><code>20000</code></strong>。</p>
+<h2 id="_3">使用实例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="../assets/stp_example.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Example" src="../assets/stp_example.png" /></a></p>
+<p>使用RSTP。</p>
+<p>配置LSW1为根桥，LSW2为备份根桥，阻塞LSW1到LSW3的冗余链路来消除二层环路。</p>
+<div class="language-text highlight"><span class="filename">LSW1</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[LSW1]stp mode rstp
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>[LSW1]stp root primary # 配置 LSW1 为根桥
 </span></code></pre></div>
-<p>修改优先级:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">方法一</label><label for="__tabbed_1_2">方法二</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-execline highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[Huawei]stp priority 0 <span class="c1"># (1)!</span>
+<div class="language-text highlight"><span class="filename">LSW2</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[LSW2]stp mode rstp
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>[LSW2]stp root secondary # 配置 LSW2 为备份根桥
 </span></code></pre></div>
-<ol>
-<li>网桥优先级取值范围：<code>0~65535</code>，缺省值：<code>32768</code>，步长为<code>4096</code>，一般根桥设为 <strong>0</strong>，备份根桥设为 <strong>4096</strong></li>
-</ol>
-</div>
-<div class="tabbed-block">
-<div class="language-execline highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[Huawei]stp root ?
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  primary    Primary root switch      <span class="c1"># 根桥</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  secondary  Secondary root switch    <span class="c1"># 备份根桥</span>
-</span></code></pre></div>
-</div>
-</div>
-</div>
-<p>端口开销配置:</p>
-<div class="language-execline highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>[LSW1]int g0/0/1
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>[LSW1-GigabitEthernet0/0/1]stp cost 100
+<div class="language-text highlight"><span class="filename">LSW3</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[LSW3]stp mode rstp
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>[LSW3]int g0/0/1
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>[LSW3]stp cost 200000
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a># 将 LSW3 的 G0/0/1 端口路径开销改大，阻塞LSW1到LSW3的冗余链路来消除二层环路。
 </span></code></pre></div>
 
 <!-- Source file information -->
@@ -1145,13 +1378,94 @@
   
 >
   <!-- Link to previous page -->
+   
+  <a
+    href="../"
+    class="md-footer__link md-footer__link--prev"
+    aria-label="上一页: STP (Spanning Tree Protocol)"
+    rel="prev"
+  >
+    <div class="md-footer__button md-icon">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+    </div>
+    <div class="md-footer__title">
+      <span class="md-footer__direction"> 上一页 </span>
+      <div class="md-ellipsis">STP (Spanning Tree Protocol)</div>
+    </div>
+  </a>
   
 
   <!-- Link to next page -->
+   
+  <a
+    href="../../chapter_route/"
+    class="md-footer__link md-footer__link--next"
+    aria-label="下一页: 路由（Route）"
+    rel="next"
+  >
+    <div class="md-footer__title">
+      <span class="md-footer__direction"> 下一页 </span>
+      <div class="md-ellipsis">路由（Route）</div>
+    </div>
+    <div class="md-footer__button md-icon">
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+    </div>
+  </a>
   
 </nav>
 
 <!-- Comment system -->
+
+
+<h5 align="center" id="__comments">欢迎在评论区留下你的见解、问题或建议</h5>
+
+<!-- Insert generated snippet here -->
+<script
+  src="https://giscus.app/client.js"
+  data-repo="Xiao-Jiang-233/hello-netdev"
+  data-repo-id="R_kgDONQGGag"
+  data-category="Announcements"
+  data-category-id="DIC_kwDONQGGas4CkUwD"
+  data-mapping="pathname"
+  data-strict="1"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="light"
+  data-lang="zh-CN"
+  crossorigin="anonymous"
+  async
+></script>
+
+<!-- Synchronize Giscus theme with palette -->
+<script>
+  var giscus = document.querySelector("script[src*=giscus]");
+
+  /* Set palette on initial load */
+  var palette = __md_get("__palette");
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate" ? "dark_dimmed" : "light";
+    giscus.setAttribute("data-theme", theme);
+  }
+
+  /* Register event handlers after documented loaded */
+  document.addEventListener("DOMContentLoaded", function () {
+    var ref = document.querySelector("[data-md-component=palette]");
+    ref.addEventListener("change", function () {
+      var palette = __md_get("__palette");
+      if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark_dimmed" : "light";
+
+        /* Instruct Giscus to change theme */
+        var frame = document.querySelector(".giscus-frame");
+        frame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme } } },
+          "https://giscus.app"
+        );
+      }
+    });
+  });
+</script>
 
                 
               </article>
@@ -1173,6 +1487,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: STP (Spanning Tree Protocol)">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                STP (Spanning Tree Protocol)
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../chapter_route/" class="md-footer__link md-footer__link--next" aria-label="下一页: 路由（Route）">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                路由（Route）
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -1235,7 +1587,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
         <script src="../../js/print-site.js"></script>
       
