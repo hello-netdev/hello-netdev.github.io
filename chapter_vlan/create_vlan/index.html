@@ -450,15 +450,6 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      参数说明
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
       使用实例
     </span>
   </a>
@@ -475,7 +466,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       注意事项
     </span>
@@ -1159,15 +1150,6 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      参数说明
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
       使用实例
     </span>
   </a>
@@ -1184,7 +1166,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       注意事项
     </span>
@@ -1230,7 +1212,6 @@
 <h2 id="_1">配置命令<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><strong>vlan</strong> <em>vlan-id</em> : 命令用来创建VLAN并进入VLAN视图，如果VLAN已存在，直接进入该VLAN的视图。</p>
 <p><strong>vlan</strong> <strong>batch</strong> { <em>vlan-id1</em> [ <strong>to</strong> <em>vlan-id2</em> ] } &amp;&lt;1-10&gt; : 命令用来批量创建VLAN但不会进入VLAN视图，不会再重新创建，保留原来的VLAN和它的相关配置。</p>
-<h2 id="_2">参数说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1257,7 +1238,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="_3">使用实例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="_2">使用实例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">方法一</label><label for="__tabbed_1_2">方法二</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1275,7 +1256,7 @@
 <p><strong>undo</strong> <strong>vlan</strong> 用来删除指定 VLAN。</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[Huawei]undo vlan 100
 </span></code></pre></div>
-<h2 id="_4">注意事项<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_3">注意事项<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ol>
 <li>VLAN 1是系统自带的VLAN，不需要创建，也不可以删除。</li>
 <li>使用vlan命令，可以创建VLAN并进入VLAN视图。如果该VLAN已存在，则直接进入该VLAN的视图。多次使用vlan命令创建VLAN，按多次创建的累加结果生效。如果该VLAN已经存在，不会再重新创建，保留原来的VLAN和相关配置。</li>
