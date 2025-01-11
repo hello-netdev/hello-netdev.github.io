@@ -708,9 +708,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#default-route" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      默认路由（Default route）
+      配置命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
     </span>
   </a>
   
@@ -1112,9 +1121,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#default-route" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      默认路由（Default route）
+      配置命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
     </span>
   </a>
   
@@ -1155,28 +1173,53 @@
 
 <!-- Page content -->
 <h1 id="static-routing">静态路由（Static routing）<a class="headerlink" href="#static-routing" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>静态路由是做非直连网段的</p>
-</div>
-<div class="language-execline highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[Huawei]ip route-static 192.168.100.0 255.255.255.0 192.168.10.2
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">#                       (目的子网号)    (目的子网掩码)  (下一条地址)</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>[Huawei]ip route-static 192.168.200.0 255.255.255.0 g0/0/0
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">#                       (目的子网号)    (目的子网掩码)  (出端口)</span>
-</span></code></pre></div>
-<div class="admonition tip">
-<ol>
-<li>是目的<strong>子网掩码</strong>，而不是<i>反码</i> ！！！</li>
-<li>在串行接口（serial）上，无法使用下一条地址，只能使用<strong>出端口</strong></li>
-<li>这是串行接口链路：RA------------------------------RB</li>
-</ol>
-</div>
-<h2 id="default-route">默认路由（Default route）<a class="headerlink" href="#default-route" title="Permanent link">&para;</a></h2>
-<div class="admonition abstract">
-<p>默认路由是一种特殊的静态路由</p>
-</div>
-<div class="language-execline highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[Huawei]ip route-static 0.0.0.0 0.0.0.0 192.168.10.2
-</span></code></pre></div>
+<h2 id="_1">配置命令<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>ip</strong> <strong>route-static</strong> <em>ip-address</em> { <em>mask</em> | <em>mask-length</em> } { <em>nexthop-address</em> | <em>interface-type</em> <em>interface-number</em> } : 配置静态路由。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>ip-address</em></td>
+<td>指定目的IP地址。</td>
+<td>点分十进制格式。</td>
+</tr>
+<tr>
+<td><em>mask</em></td>
+<td>指定IP地址的掩码。</td>
+<td>点分十进制格式。</td>
+</tr>
+<tr>
+<td><em>mask-length</em></td>
+<td>指定掩码长度。因为32位的掩码要求“1”是连续的，点分十进制格式的掩码可以用掩码长度代替。</td>
+<td>整数形式，取值范围是 0～32。</td>
+</tr>
+<tr>
+<td><em>nexthop-address</em></td>
+<td>指定路由的下一跳的IP地址。</td>
+<td>点分十进制格式。</td>
+</tr>
+<tr>
+<td><em>interface-type</em> <em>interface-number</em></td>
+<td>指定路由转发报文的接口类型和接口号。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>undo</strong> <strong>ip</strong> <strong>route-static</strong> <strong>all</strong> : 删除所有IPv4单播静态路由。</p>
+<h2 id="_2">注意事项<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>静态路由如果不配置优先级，默认优先级为60。</li>
+<li>如果目的IP地址和掩码都为0.0.0.0，配置的路由为缺省路由。如果检查路由表时没有找到相关路由，则将使用缺省路由进行报文转发。</li>
+<li>配置不同的优先级，可实现不同的路由管理策略。例如，为同一目的地配置多条路由，如果指定相同的优先级，则实现路由负载分担；如果指定不同的优先级，则实现路由备份。</li>
+<li>配置静态路由时，可根据实际需要指定出接口或下一跳地址。对于点到点接口，只需指定出接口；对于广播类型接口，必须指定下一跳。</li>
+<li>在某些情况下，如链路层被PPP封装，即使不知道对端地址，也可以在路由器配置时指定出接口。这样，即使对端地址发生了改变也无须改变该路由器的配置。</li>
+</ul>
 
 <!-- Source file information -->
 
@@ -1230,6 +1273,57 @@
 </nav>
 
 <!-- Comment system -->
+
+
+<h5 align="center" id="__comments">欢迎在评论区留下你的见解、问题或建议</h5>
+
+<!-- Insert generated snippet here -->
+<script
+  src="https://giscus.app/client.js"
+  data-repo="Xiao-Jiang-233/hello-netdev"
+  data-repo-id="R_kgDONQGGag"
+  data-category="Announcements"
+  data-category-id="DIC_kwDONQGGas4CkUwD"
+  data-mapping="pathname"
+  data-strict="1"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="light"
+  data-lang="zh-CN"
+  crossorigin="anonymous"
+  async
+></script>
+
+<!-- Synchronize Giscus theme with palette -->
+<script>
+  var giscus = document.querySelector("script[src*=giscus]");
+
+  /* Set palette on initial load */
+  var palette = __md_get("__palette");
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate" ? "dark_dimmed" : "light";
+    giscus.setAttribute("data-theme", theme);
+  }
+
+  /* Register event handlers after documented loaded */
+  document.addEventListener("DOMContentLoaded", function () {
+    var ref = document.querySelector("[data-md-component=palette]");
+    ref.addEventListener("change", function () {
+      var palette = __md_get("__palette");
+      if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark_dimmed" : "light";
+
+        /* Instruct Giscus to change theme */
+        var frame = document.querySelector(".giscus-frame");
+        frame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme } } },
+          "https://giscus.app"
+        );
+      }
+    });
+  });
+</script>
 
                 
               </article>

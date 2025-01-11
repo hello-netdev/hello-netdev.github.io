@@ -735,6 +735,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="RIP (Routing Information Protocol)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用实例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -743,6 +767,39 @@
       OSPF (Open Shortest Path First)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="OSPF (Open Shortest Path First)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用实例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1127,6 +1184,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="RIP (Routing Information Protocol)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用实例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1135,6 +1216,39 @@
       OSPF (Open Shortest Path First)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="OSPF (Open Shortest Path First)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用实例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1173,33 +1287,118 @@
 
 <!-- Page content -->
 <h1 id="dynamic-routing">动态路由 （Dynamic routing）<a class="headerlink" href="#dynamic-routing" title="Permanent link">&para;</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>动态路由是宣告直连网段的</p>
-</div>
 <h2 id="rip-routing-information-protocol">RIP (Routing Information Protocol)<a class="headerlink" href="#rip-routing-information-protocol" title="Permanent link">&para;</a></h2>
-<div class="language-execline highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[Huawei]rip
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>[Huawei-rip-1]version 2 <span class="c1"># 必须为版本2</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>[Huawei-rip-1]network 192.168.10.0 <span class="c1"># 必须是主类网络地址</span>
+<h3 id="_1">配置命令<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p><strong>rip</strong> : 使能指定的RIP进程。</p>
+<p><strong>version</strong> { <strong>1</strong> | <strong>2</strong> } : 指定一个全局RIP版本。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>指定RIP-1版本</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>指定RIP-2版本</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>network</strong> <em>network-address</em> : 对指定网段接口使能RIP路由。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>network-address</em></td>
+<td>指定使能RIP的网络地址。该地址必须是自然网段的地址。</td>
+<td>点分十进制形式。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_2">使用实例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;Huawei&gt; system-view
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>[Huawei] rip
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>[Huawei-rip-1]version 2 # 指定为 RIP 版本2
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>[Huawei-rip-1]network 192.168.10.0
 </span></code></pre></div>
 <h2 id="ospf-open-shortest-path-first">OSPF (Open Shortest Path First)<a class="headerlink" href="#ospf-open-shortest-path-first" title="Permanent link">&para;</a></h2>
+<h3 id="_3">配置命令<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p><strong>ospf</strong> : 用来创建并运行OSPF进程。</p>
+<p><strong>area</strong> <em>area-id</em> : 用来创建OSPF区域，并进入OSPF区域视图。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>area-id</em></td>
+<td>指定区域的标识。其中区域号 <em>area-id</em> 是0的称为骨干区域。</td>
+<td>可以是十进制整数或点分十进制格式。采取整数形式时，取值范围是 0～4294967295 。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>network</strong> <em>network-address</em> <em>wildcard-mask</em> : 用来指定运行OSPF协议的接口和接口所属的区域。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>network-address</em></td>
+<td>接口所在的网段地址。</td>
+<td>点分十进制格式。</td>
+</tr>
+<tr>
+<td><em>wildcard-mask</em></td>
+<td>IP地址的反码，相当于将IP地址的掩码反转（0变1，1变0）。例如0.0.0.255表示掩码长度24位。</td>
+<td>点分十进制格式。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">注意事项<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>区域的边界是路由器，不是链路。</li>
+<li>一个网段（链路）只能属于一个区域，或者说每个运行OSPF的接口必须指明属于哪一个区域。</li>
+<li>骨干区域负责区域之间的路由，非骨干区域之间的路由信息必须通过骨干区域来转发。</li>
+<li>所有非骨干区域必须与骨干区域保持连通，骨干区域自身也必须保持连通。</li>
+</ul>
+<h3 id="_5">使用实例<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p><a class="glightbox" href="../dynamic_routing.assets/ospf_multi_area.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="OSPF多区域" src="../dynamic_routing.assets/ospf_multi_area.png" /></a></p>
-<div class="language-execline highlight"><span class="filename">AR1:</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[AR1]ospf router-id ? <span class="c1"># !!! 别瞎##配id</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  IP_ADDR&lt;X.X.X.X&gt;  OSPF Private router ID value
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  auto-recover      Automatic modification of conflicted router IDs
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>[AR1]ospf
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="hll">[AR1-ospf-1]area 0
-</span></span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="hll">[AR1-ospf-1-area-0.0.0.0]network 192.168.10.0 0.0.0.3 <span class="c1"># 这里是反掩码</span>
-</span></span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="hll">[AR1-ospf-1-area-0.0.0.0]area 1
-</span></span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="hll">[AR1-ospf-1-area-0.0.0.1]network 192.168.5.0 0.0.0.3
+<div class="language-text highlight"><span class="filename">AR1:</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[AR1]ospf
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>[AR1-ospf-1]area 0
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>[AR1-ospf-1-area-0.0.0.0]network 192.168.10.0 0.0.0.3 # 这里是反掩码
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>[AR1-ospf-1-area-0.0.0.0]area 1
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="hll">[AR1-ospf-1-area-0.0.0.1]network 192.168.5.0 0.0.0.3
 </span></span></code></pre></div>
-<div class="language-execline highlight"><span class="filename">AR3:</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[AR3]ospf
+<div class="language-text highlight"><span class="filename">AR3:</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[AR3]ospf
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>[AR3-ospf-1]area 1
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="hll">[AR3-ospf-1-area-0.0.0.1]network 192.168.5.0 0.0.0.3
 </span></span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="hll">[AR3-ospf-1-area-0.0.0.1]network 192.168.1.0 0.0.0.255
 </span></span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="hll">[AR3-ospf-1-area-0.0.0.1]network 192.168.2.0 0.0.0.255
 </span></span></code></pre></div>
-<div class="language-execline highlight"><span class="filename">AR2:</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>[AR2]ospf
+<div class="language-text highlight"><span class="filename">AR2:</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>[AR2]ospf
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>[AR2-ospf-1]area 0
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>[AR2-ospf-1-area-0.0.0.0]network 192.168.10.0 0.0.0.3
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="hll">[AR2-ospf-1-area-0.0.0.0]area 2
@@ -1259,6 +1458,57 @@
 </nav>
 
 <!-- Comment system -->
+
+
+<h5 align="center" id="__comments">欢迎在评论区留下你的见解、问题或建议</h5>
+
+<!-- Insert generated snippet here -->
+<script
+  src="https://giscus.app/client.js"
+  data-repo="Xiao-Jiang-233/hello-netdev"
+  data-repo-id="R_kgDONQGGag"
+  data-category="Announcements"
+  data-category-id="DIC_kwDONQGGas4CkUwD"
+  data-mapping="pathname"
+  data-strict="1"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="light"
+  data-lang="zh-CN"
+  crossorigin="anonymous"
+  async
+></script>
+
+<!-- Synchronize Giscus theme with palette -->
+<script>
+  var giscus = document.querySelector("script[src*=giscus]");
+
+  /* Set palette on initial load */
+  var palette = __md_get("__palette");
+  if (palette && typeof palette.color === "object") {
+    var theme = palette.color.scheme === "slate" ? "dark_dimmed" : "light";
+    giscus.setAttribute("data-theme", theme);
+  }
+
+  /* Register event handlers after documented loaded */
+  document.addEventListener("DOMContentLoaded", function () {
+    var ref = document.querySelector("[data-md-component=palette]");
+    ref.addEventListener("change", function () {
+      var palette = __md_get("__palette");
+      if (palette && typeof palette.color === "object") {
+        var theme = palette.color.scheme === "slate" ? "dark_dimmed" : "light";
+
+        /* Instruct Giscus to change theme */
+        var frame = document.querySelector(".giscus-frame");
+        frame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme } } },
+          "https://giscus.app"
+        );
+      }
+    });
+  });
+</script>
 
                 
               </article>
