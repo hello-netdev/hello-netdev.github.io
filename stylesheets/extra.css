@@ -1,7 +1,7 @@
 /* Color Settings */
 /* https://github.com/squidfunk/mkdocs-material/blob/6b5035f5580f97532d664e3d1babf5f320e88ee9/src/assets/stylesheets/main/_colors.scss */
 /* https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-colors */
-:root>* {
+:root > * {
   --md-primary-fg-color: #ffffff;
   --md-primary-bg-color: #1d1d20;
 
@@ -160,7 +160,7 @@ body {
 
 /* max height of code block */
 /* https://github.com/squidfunk/mkdocs-material/issues/3444 */
-.md-typeset pre>code {
+.md-typeset pre > code {
   max-height: 25rem;
 }
 
@@ -194,13 +194,13 @@ body {
   box-shadow: var(--md-shadow-z1);
 }
 
-.md-typeset .pythontutor>.admonition-title,
-.md-typeset .pythontutor>summary {
+.md-typeset .pythontutor > .admonition-title,
+.md-typeset .pythontutor > summary {
   background-color: var(--md-code-bg-color);
 }
 
-.md-typeset .pythontutor>.admonition-title::before,
-.md-typeset .pythontutor>summary::before {
+.md-typeset .pythontutor > .admonition-title::before,
+.md-typeset .pythontutor > summary::before {
   background-color: rgb(55, 118, 171);
   -webkit-mask-image: var(--md-admonition-icon--pythontutor);
   mask-image: var(--md-admonition-icon--pythontutor);
@@ -212,12 +212,12 @@ body {
 }
 
 /* code block tabs */
-.md-typeset .tabbed-labels>label {
+.md-typeset .tabbed-labels > label {
   font-size: 0.61rem;
 }
 
-.md-typeset .tabbed-labels--linked>label>a {
-  padding: .78125em 1.0em .625em;
+.md-typeset .tabbed-labels--linked > label > a {
+  padding: 0.78125em 1em 0.625em;
 }
 
 /* header banner */
@@ -366,13 +366,13 @@ a:hover .text-button span {
 }
 
 /* hover on the planets */
-.hero-div>a>img {
+.hero-div > a > img {
   width: auto;
   position: absolute;
   transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
-.hero-div>a>span {
+.hero-div > a > span {
   margin: 0;
   position: absolute;
   transform: translateX(-50%) translateY(-50%);
@@ -381,12 +381,13 @@ a:hover .text-button span {
   color: white;
 }
 
-.hero-div>a:hover>img {
-  filter: brightness(1.15) saturate(1.1) drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.2));
+.hero-div > a:hover > img {
+  filter: brightness(1.15) saturate(1.1)
+    drop-shadow(0 0 0.5rem rgba(255, 255, 255, 0.2));
   transform: scale(1.03);
 }
 
-.hero-div>a:hover>span {
+.hero-div > a:hover > span {
   text-decoration: underline;
   color: var(--md-typeset-btn-color);
 }
@@ -440,7 +441,7 @@ a:hover .text-button span {
   margin: 2em;
 }
 
-.intro-text>div {
+.intro-text > div {
   align-self: flex-start;
   width: auto;
   margin: 0 auto;

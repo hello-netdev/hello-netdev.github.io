@@ -12,28 +12,28 @@
         <meta name="author" content="Xiao-Jiang-233">
       
       
-        <link rel="canonical" href="https://hello-netdev.littlesirius.top/chapter_route/">
+        <link rel="canonical" href="https://hello-netdev.littlesirius.top/chapter_route/ospf/">
       
       
-        <link rel="prev" href="../chapter_stp/basic_operations/">
+        <link rel="prev" href="../rip/">
       
       
-        <link rel="next" href="static_routing/">
+        <link rel="next" href="../../chapter_cyber_security/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>路由（Route） - Hello Netdev</title>
+        <title>4.2.2   OSPF - Hello Netdev</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,16 +52,16 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -70,7 +70,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#route" class="md-skip">
+        <a href="#ospf-open-shortest-path-first" class="md-skip">
           跳转至
         </a>
       
@@ -105,7 +105,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="Hello Netdev" class="md-header__button md-logo" aria-label="Hello Netdev" data-md-component="logo">
+    <a href="../.." title="Hello Netdev" class="md-header__button md-logo" aria-label="Hello Netdev" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              路由（Route）
+              4.2.2 &nbsp; OSPF
             
           </span>
         </div>
@@ -245,7 +245,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Hello Netdev" class="md-nav__button md-logo" aria-label="Hello Netdev" data-md-component="logo">
+    <a href="../.." title="Hello Netdev" class="md-nav__button md-logo" aria-label="Hello Netdev" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -293,7 +293,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter_hello_netdev/" class="md-nav__link ">
+            <a href="../../chapter_hello_netdev/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -367,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_basic_configuration/port_group/" class="md-nav__link">
+      <a href="../../chapter_basic_configuration/port_group/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -423,7 +423,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter_vlan/" class="md-nav__link ">
+            <a href="../../chapter_vlan/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -456,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_vlan/create_vlan/" class="md-nav__link">
+      <a href="../../chapter_vlan/create_vlan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_vlan/port_configuration/" class="md-nav__link">
+      <a href="../../chapter_vlan/port_configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -498,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_vlan/inter-vlan_communication/" class="md-nav__link">
+      <a href="../../chapter_vlan/inter-vlan_communication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -519,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_vlan/gvrp/" class="md-nav__link">
+      <a href="../../chapter_vlan/gvrp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -540,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_vlan/link_aggregation/" class="md-nav__link">
+      <a href="../../chapter_vlan/link_aggregation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -588,7 +588,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter_stp/" class="md-nav__link ">
+            <a href="../../chapter_stp/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -621,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_stp/basic_operations/" class="md-nav__link">
+      <a href="../../chapter_stp/basic_operations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -673,7 +673,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -684,7 +684,7 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -706,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="static_routing/" class="md-nav__link">
+      <a href="../static_routing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -724,8 +724,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -736,11 +738,11 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -754,7 +756,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             4.2 &nbsp; 动态路由
@@ -768,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="rip/" class="md-nav__link">
+      <a href="../rip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -786,10 +788,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="ospf/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4.2.2 &nbsp; OSPF
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -798,6 +820,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用实例
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -847,7 +916,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter_cyber_security/" class="md-nav__link ">
+            <a href="../../chapter_cyber_security/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -880,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_cyber_security/port_isolation/" class="md-nav__link">
+      <a href="../../chapter_cyber_security/port_isolation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -901,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_cyber_security/port_security/" class="md-nav__link">
+      <a href="../../chapter_cyber_security/port_security/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -951,7 +1020,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter_acl/" class="md-nav__link ">
+            <a href="../../chapter_acl/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -984,7 +1053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_acl/basic/" class="md-nav__link">
+      <a href="../../chapter_acl/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1005,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_acl/adv/" class="md-nav__link">
+      <a href="../../chapter_acl/adv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1055,7 +1124,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../chapter_nat/" class="md-nav__link ">
+            <a href="../../chapter_nat/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1088,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_nat/static/" class="md-nav__link">
+      <a href="../../chapter_nat/static/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1109,7 +1178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chapter_nat/dynamic%26pat/" class="md-nav__link">
+      <a href="../../chapter_nat/dynamic%26pat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1137,7 +1206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../print_page/" class="md-nav__link">
+      <a href="../../print_page/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1170,6 +1239,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用实例
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1190,7 +1294,7 @@
 <!-- Edit button -->
 
 <a
-  href="https://github.com/Xiao-Jiang-233/hello-netdev/tree/main/docs/chapter_route/index.md"
+  href="https://github.com/Xiao-Jiang-233/hello-netdev/tree/main/docs/chapter_route/ospf.md"
   title="编辑此页"
   class="md-content__button md-icon"
 >
@@ -1202,13 +1306,76 @@
  
 
 <!-- Page content -->
-<h1 id="route"><center class="force-page-break">路由（Route）</center><a class="headerlink" href="#route" title="Permanent link">&para;</a></h1>
-<p><a class="glightbox" href="../assets/covers/Image_placeholder.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Router" src="../assets/covers/Image_placeholder.png" /></a></p>
-<div class="admonition abstract">
-<p class="admonition-title">Abstract</p>
-<p>路由犹如可靠的网络信使调度员。</p>
-<p>它在众多的连接可能性中巧妙安排，确保每一份数据都能及时、准确地抵达目的地 。</p>
-</div>
+<h1 id="ospf-open-shortest-path-first">OSPF (Open Shortest Path First)<a class="headerlink" href="#ospf-open-shortest-path-first" title="Permanent link">&para;</a></h1>
+<h2 id="_1">配置命令<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>ospf</strong> : 用来创建并运行OSPF进程。</p>
+<p><strong>area</strong> <em>area-id</em> : 用来创建OSPF区域，并进入OSPF区域视图。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>area-id</em></td>
+<td>指定区域的标识。其中区域号 <em>area-id</em> 是0的称为骨干区域。</td>
+<td>可以是十进制整数或点分十进制格式。采取整数形式时，取值范围是 0～4294967295 。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>network</strong> <em>network-address</em> <em>wildcard-mask</em> : 用来指定运行OSPF协议的接口和接口所属的区域。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>network-address</em></td>
+<td>接口所在的网段地址。</td>
+<td>点分十进制格式。</td>
+</tr>
+<tr>
+<td><em>wildcard-mask</em></td>
+<td>IP地址的反码，相当于将IP地址的掩码反转（0变1，1变0）。例如0.0.0.255表示掩码长度24位。</td>
+<td>点分十进制格式。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">注意事项<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>区域的边界是路由器，不是链路。</li>
+<li>一个网段（链路）只能属于一个区域，或者说每个运行OSPF的接口必须指明属于哪一个区域。</li>
+<li>骨干区域负责区域之间的路由，非骨干区域之间的路由信息必须通过骨干区域来转发。</li>
+<li>所有非骨干区域必须与骨干区域保持连通，骨干区域自身也必须保持连通。</li>
+</ul>
+<h2 id="_3">使用实例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="../ospf.assets/ospf_multi_area.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="OSPF多区域" src="../ospf.assets/ospf_multi_area.png" /></a></p>
+<div class="language-text highlight"><span class="filename">AR1:</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[AR1]ospf
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>[AR1-ospf-1]area 0
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>[AR1-ospf-1-area-0.0.0.0]network 192.168.10.0 0.0.0.3 # 这里是反掩码
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>[AR1-ospf-1-area-0.0.0.0]area 1
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="hll">[AR1-ospf-1-area-0.0.0.1]network 192.168.5.0 0.0.0.3
+</span></span></code></pre></div>
+<div class="language-text highlight"><span class="filename">AR3:</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[AR3]ospf
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>[AR3-ospf-1]area 1
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="hll">[AR3-ospf-1-area-0.0.0.1]network 192.168.5.0 0.0.0.3
+</span></span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="hll">[AR3-ospf-1-area-0.0.0.1]network 192.168.1.0 0.0.0.255
+</span></span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="hll">[AR3-ospf-1-area-0.0.0.1]network 192.168.2.0 0.0.0.255
+</span></span></code></pre></div>
+<div class="language-text highlight"><span class="filename">AR2:</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>[AR2]ospf
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>[AR2-ospf-1]area 0
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>[AR2-ospf-1-area-0.0.0.0]network 192.168.10.0 0.0.0.3
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="hll">[AR2-ospf-1-area-0.0.0.0]area 2
+</span></span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="hll">[AR2-ospf-1-area-0.0.0.1]network 192.168.6.0 0.0.0.3
+</span></span></code></pre></div>
+<p>省略其他</p>
 
 <!-- Source file information -->
 
@@ -1227,9 +1394,9 @@
   <!-- Link to previous page -->
    
   <a
-    href="../chapter_stp/basic_operations/"
+    href="../rip/"
     class="md-footer__link md-footer__link--prev"
-    aria-label="上一页: 3.1 &amp;nbsp; STP基础操作"
+    aria-label="上一页: 4.2.1 &amp;nbsp; RIP"
     rel="prev"
   >
     <div class="md-footer__button md-icon">
@@ -1237,7 +1404,7 @@
     </div>
     <div class="md-footer__title">
       <span class="md-footer__direction"> 上一页 </span>
-      <div class="md-ellipsis">3.1 &nbsp; STP基础操作</div>
+      <div class="md-ellipsis">4.2.1 &nbsp; RIP</div>
     </div>
   </a>
   
@@ -1245,14 +1412,14 @@
   <!-- Link to next page -->
    
   <a
-    href="static_routing/"
+    href="../../chapter_cyber_security/"
     class="md-footer__link md-footer__link--next"
-    aria-label="下一页: 4.1 &amp;nbsp; 静态路由"
+    aria-label="下一页: 网络安全（Cyber Security）"
     rel="next"
   >
     <div class="md-footer__title">
       <span class="md-footer__direction"> 下一页 </span>
-      <div class="md-ellipsis">4.1 &nbsp; 静态路由</div>
+      <div class="md-ellipsis">网络安全（Cyber Security）</div>
     </div>
     <div class="md-footer__button md-icon">
        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
@@ -1339,7 +1506,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../chapter_stp/basic_operations/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 3.1 &amp;nbsp; STP基础操作">
+          <a href="../rip/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 4.2.1 &amp;nbsp; RIP">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1349,20 +1516,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                3.1 &nbsp; STP基础操作
+                4.2.1 &nbsp; RIP
               </div>
             </div>
           </a>
         
         
           
-          <a href="static_routing/" class="md-footer__link md-footer__link--next" aria-label="下一页: 4.1 &amp;nbsp; 静态路由">
+          <a href="../../chapter_cyber_security/" class="md-footer__link md-footer__link--next" aria-label="下一页: 网络安全（Cyber Security）">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                4.1 &nbsp; 静态路由
+                网络安全（Cyber Security）
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1431,12 +1598,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.action.edit", "content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.code.annotate", "content.code.copy", "content.code.select", "content.tabs.link", "content.tooltips", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
-        <script src="../js/print-site.js"></script>
+        <script src="../../js/print-site.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": false, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "none"});

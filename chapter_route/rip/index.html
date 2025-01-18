@@ -12,13 +12,13 @@
         <meta name="author" content="Xiao-Jiang-233">
       
       
-        <link rel="canonical" href="https://hello-netdev.littlesirius.top/chapter_vlan/port_group/">
+        <link rel="canonical" href="https://hello-netdev.littlesirius.top/chapter_route/rip/">
       
       
-        <link rel="prev" href="../gvrp/">
+        <link rel="prev" href="../static_routing/">
       
       
-        <link rel="next" href="../../chapter_stp/">
+        <link rel="next" href="../ospf/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>2.6   批量配置 - Hello Netdev</title>
+        <title>4.2.1   RIP - Hello Netdev</title>
       
     
     
@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#rip-routing-information-protocol" class="md-skip">
           跳转至
         </a>
       
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2.6 &nbsp; 批量配置
+              4.2.1 &nbsp; RIP
             
           </span>
         </div>
@@ -325,7 +325,72 @@
       
   
   
+  
+  
     
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    第 1 章 &nbsp; 设备的基本配置
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            第 1 章 &nbsp; 设备的基本配置
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter_basic_configuration/port_group/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    批量配置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
   
   
   
@@ -346,41 +411,39 @@
       
         
       
-        
-      
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../chapter_vlan/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
-    第 2 章 &nbsp; VLAN
+    第 2 章 &nbsp; VLAN 技术
   </span>
   
 
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            第 2 章 &nbsp; VLAN
+            第 2 章 &nbsp; VLAN 技术
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -393,7 +456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../create_vlan/" class="md-nav__link">
+      <a href="../../chapter_vlan/create_vlan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -414,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../port_configuration/" class="md-nav__link">
+      <a href="../../chapter_vlan/port_configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -435,7 +498,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../inter-vlan_communication/" class="md-nav__link">
+      <a href="../../chapter_vlan/inter-vlan_communication/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -456,11 +519,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../link_aggregation/" class="md-nav__link">
+      <a href="../../chapter_vlan/gvrp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    2.4 &nbsp; 链路聚合
+    2.4 &nbsp; GVRP
   </span>
   
 
@@ -477,103 +540,15 @@
   
   
     <li class="md-nav__item">
-      <a href="../gvrp/" class="md-nav__link">
+      <a href="../../chapter_vlan/link_aggregation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    2.5 &nbsp; GVRP
+    2.5 &nbsp; 链路聚合
   </span>
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    2.6 &nbsp; 批量配置
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    2.6 &nbsp; 批量配置
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      配置命令
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      使用实例
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      注意事项
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -608,7 +583,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           
@@ -624,14 +599,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             第 3 章 &nbsp; STP
           </label>
@@ -671,6 +646,8 @@
       
   
   
+    
+  
   
   
     
@@ -687,16 +664,16 @@
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../chapter_route/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -707,14 +684,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             第 4 章 &nbsp; 路由
           </label>
@@ -729,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../chapter_route/static_routing/" class="md-nav__link">
+      <a href="../static_routing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -747,18 +724,148 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../chapter_route/dynamic_routing/" class="md-nav__link">
+  
+    
+    
+      
         
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     4.2 &nbsp; 动态路由
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            4.2 &nbsp; 动态路由
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4.2.1 &nbsp; RIP
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    4.2.1 &nbsp; RIP
+  </span>
+  
+
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用实例
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ospf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.2.2 &nbsp; OSPF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -795,7 +902,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
           
@@ -811,14 +918,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             第 5 章 &nbsp; 网络安全
           </label>
@@ -899,7 +1006,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
           
@@ -915,14 +1022,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             第 6 章 &nbsp; ACL
           </label>
@@ -1003,7 +1110,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           
@@ -1019,14 +1126,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             第 7 章 &nbsp; NAT
           </label>
@@ -1130,7 +1237,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       配置命令
     </span>
@@ -1139,18 +1246,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       使用实例
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      注意事项
     </span>
   </a>
   
@@ -1178,7 +1276,7 @@
 <!-- Edit button -->
 
 <a
-  href="https://github.com/Xiao-Jiang-233/hello-netdev/tree/main/docs/chapter_vlan/port_group.md"
+  href="https://github.com/Xiao-Jiang-233/hello-netdev/tree/main/docs/chapter_route/rip.md"
   title="编辑此页"
   class="md-content__button md-icon"
 >
@@ -1190,9 +1288,10 @@
  
 
 <!-- Page content -->
-<h1 id="_1">批量配置<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">配置命令<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><strong>port-group</strong> <strong>group-member</strong> { <em>interface-type</em> <em>interface-number1</em> [ <strong>to</strong> <em>interface-type</em> <em>interface-number2</em> ] } &amp;&lt;1-10&gt; : 命令用来创建一个临时端口组，并将指定的以太网接口添加到临时端口组中。在端口组下配置的命令会在所有成员接口下自动执行。</p>
+<h1 id="rip-routing-information-protocol">RIP (Routing Information Protocol)<a class="headerlink" href="#rip-routing-information-protocol" title="Permanent link">&para;</a></h1>
+<h2 id="_1">配置命令<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p><strong>rip</strong> : 使能指定的RIP进程。</p>
+<p><strong>version</strong> { <strong>1</strong> | <strong>2</strong> } : 指定一个全局RIP版本。</p>
 <table>
 <thead>
 <tr>
@@ -1203,22 +1302,40 @@
 </thead>
 <tbody>
 <tr>
-<td><em>interface-type</em> <em>interface-number1</em> [ <strong>to</strong> <em>interface-type</em> <em>interface-number2</em> ]</td>
-<td>指定添加到临时端口组中的以太网接口。用 <strong>to</strong> 连接的两个接口，表示接口范围是在两个接口编号之间的所有接口。</td>
-<td>接口编号 <em>interface-number2</em> 必须大于 <em>interface-number1</em>。</td>
+<td>1</td>
+<td>指定RIP-1版本</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>指定RIP-2版本</td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h2 id="_3">使用实例<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>见<a href="../port_configuration/#_4">VLAN 端口配置</a></p>
-<h2 id="_4">注意事项<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>执行该命令时，使用 <strong>to</strong> 关键字需要注意以下几点：</p>
-<ul>
-<li><strong>to</strong> 关键字前后的两个接口必须在同一台交换机上。当有多个交换机的连续接口需要加入时，建议分多次执行该命令或使用多次 to 关键字。</li>
-<li><strong>to</strong> 关键字前后的两个接口需要表示相同的接口类型，比如同是 GE 接口。</li>
-<li><strong>to</strong> 关键字前后的两个接口必须是具有同一属性的接口。</li>
-<li>如果不使用 <strong>to</strong> 关键字则没有以上限制。</li>
-</ul>
+<p><strong>network</strong> <em>network-address</em> : 对指定网段接口使能RIP路由。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>network-address</em></td>
+<td>指定使能RIP的网络地址。该地址必须是自然网段的地址。</td>
+<td>点分十进制形式。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_2">使用实例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;Huawei&gt; system-view
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>[Huawei] rip
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>[Huawei-rip-1]version 2 # 指定为 RIP 版本2
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>[Huawei-rip-1]network 192.168.10.0
+</span></code></pre></div>
 
 <!-- Source file information -->
 
@@ -1237,9 +1354,9 @@
   <!-- Link to previous page -->
    
   <a
-    href="../gvrp/"
+    href="../static_routing/"
     class="md-footer__link md-footer__link--prev"
-    aria-label="上一页: 2.5 &amp;nbsp; GVRP"
+    aria-label="上一页: 4.1 &amp;nbsp; 静态路由"
     rel="prev"
   >
     <div class="md-footer__button md-icon">
@@ -1247,7 +1364,7 @@
     </div>
     <div class="md-footer__title">
       <span class="md-footer__direction"> 上一页 </span>
-      <div class="md-ellipsis">2.5 &nbsp; GVRP</div>
+      <div class="md-ellipsis">4.1 &nbsp; 静态路由</div>
     </div>
   </a>
   
@@ -1255,14 +1372,14 @@
   <!-- Link to next page -->
    
   <a
-    href="../../chapter_stp/"
+    href="../ospf/"
     class="md-footer__link md-footer__link--next"
-    aria-label="下一页: STP (Spanning Tree Protocol)"
+    aria-label="下一页: 4.2.2 &amp;nbsp; OSPF"
     rel="next"
   >
     <div class="md-footer__title">
       <span class="md-footer__direction"> 下一页 </span>
-      <div class="md-ellipsis">STP (Spanning Tree Protocol)</div>
+      <div class="md-ellipsis">4.2.2 &nbsp; OSPF</div>
     </div>
     <div class="md-footer__button md-icon">
        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
@@ -1349,7 +1466,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../gvrp/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 2.5 &amp;nbsp; GVRP">
+          <a href="../static_routing/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 4.1 &amp;nbsp; 静态路由">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1359,20 +1476,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                2.5 &nbsp; GVRP
+                4.1 &nbsp; 静态路由
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../chapter_stp/" class="md-footer__link md-footer__link--next" aria-label="下一页: STP (Spanning Tree Protocol)">
+          <a href="../ospf/" class="md-footer__link md-footer__link--next" aria-label="下一页: 4.2.2 &amp;nbsp; OSPF">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                STP (Spanning Tree Protocol)
+                4.2.2 &nbsp; OSPF
               </div>
             </div>
             <div class="md-footer__button md-icon">
