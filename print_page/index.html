@@ -1045,6 +1045,113 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../chapter_nat/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    第 7 章 &nbsp; NAT
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            第 7 章 &nbsp; NAT
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_nat/static_nat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.1 &nbsp; 静态NAT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_nat/dynamic_nat%26easy_ip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6.2 &nbsp; 动态NAT & Easy IP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -1354,6 +1461,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#section-第-7-章-nbsp-nat" class="md-nav__link">
+    <span class="md-ellipsis">
+      VIII. 第 7 章 &nbsp; NAT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VIII. 第 7 章   NAT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chapter_nat" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. NAT（Network Address Translation）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chapter_nat-static_nat" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. 6.1 &nbsp; 静态NAT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chapter_nat-dynamic_nat%26easy_ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. 6.2 &nbsp; 动态NAT & Easy IP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1643,6 +1792,48 @@
   <a href="#chapter_acl-apply_acl" class="md-nav__link">
     <span class="md-ellipsis">
       18. 6.2 &nbsp; 应用 ACL
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-第-7-章-nbsp-nat" class="md-nav__link">
+    <span class="md-ellipsis">
+      VIII. 第 7 章 &nbsp; NAT
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VIII. 第 7 章   NAT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chapter_nat" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. NAT（Network Address Translation）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chapter_nat-static_nat" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. 6.1 &nbsp; 静态NAT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chapter_nat-dynamic_nat%26easy_ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. 6.2 &nbsp; 动态NAT & Easy IP
     </span>
   </a>
   
@@ -2660,9 +2851,9 @@
 </table>
 <h3 id="chapter_acl-configure_acl-acl_2">高级 ACL 视图<a class="headerlink" href="#chapter_acl-configure_acl-acl_2" title="Permanent link">&para;</a></h3>
 <p>当版本类型为IPv4或ICMP时，高级访问控制列表的命令格式为：</p>
-<p><strong>rule</strong> [ <em>rule-id</em> ] { <strong>deny</strong> | <strong>permit</strong> } { <strong>ip</strong> | <strong>icmp</strong> } [ <strong>destination</strong> { <em>destination-address</em> <em>destination-wildcard</em> | <strong>any</strong> } | <strong>source</strong> { <em>source-address</em> <em>source-wildcard</em> | <strong>any</strong> } ] *</p>
+<p><strong>rule</strong> [ <em>rule-id</em> ] { <strong>deny</strong> | <strong>permit</strong> } { <strong>ip</strong> | <strong>icmp</strong> } [ <strong>destination</strong> { <em>destination-address</em> <em>destination-wildcard</em> | <strong>any</strong> } | <strong>source</strong> { <em>source-address</em> <em>source-wildcard</em> | <strong>any</strong> } ] * : 配置高级ACL规则。</p>
 <p>当协议类型为TCP或者UDP时，高级访问控制列表的命令格式为：</p>
-<p><strong>rule</strong> [ <em>rule-id</em> ] { <strong>deny</strong> | <strong>permit</strong> } { <strong>tcp</strong> | <strong>udp</strong> } [ <strong>destination</strong> { <em>destination-address</em> <em>destination-wildcard</em> | <strong>any</strong> } | <em>destination-port</em> { <strong>eq</strong> <em>port</em> | <strong>gt</strong> <em>port</em> | <strong>lt</strong> <em>port</em> | <strong>range</strong> <em>port-start</em> <em>port-end</em> } | <strong>source</strong> { <em>source-address</em> <em>source-wildcard</em> | <strong>any</strong> } ] *</p>
+<p><strong>rule</strong> [ <em>rule-id</em> ] { <strong>deny</strong> | <strong>permit</strong> } { <strong>tcp</strong> | <strong>udp</strong> } [ <strong>destination</strong> { <em>destination-address</em> <em>destination-wildcard</em> | <strong>any</strong> } | <em>destination-port</em> { <strong>eq</strong> <em>port</em> | <strong>gt</strong> <em>port</em> | <strong>lt</strong> <em>port</em> | <strong>range</strong> <em>port-start</em> <em>port-end</em> } | <strong>source</strong> { <em>source-address</em> <em>source-wildcard</em> | <strong>any</strong> } ] * : 配置高级ACL规则。</p>
 <table>
 <thead>
 <tr>
@@ -2790,7 +2981,136 @@
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#chapter_acl-apply_acl-__codelineno-0-4"></a>[Huawei-acl-adv-3000] quit
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#chapter_acl-apply_acl-__codelineno-0-5"></a>[Huawei] interface ethernet 2/0/0
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#chapter_acl-apply_acl-__codelineno-0-6"></a>[Huawei-Ethernet2/0/0] traffic-filter inbound acl 3000
-</span></code></pre></div></section><h1 class='nav-section-title-end'>Ended: 第 6 章 &nbsp; ACL</h1></div>
+</span></code></pre></div></section><h1 class='nav-section-title-end'>Ended: 第 6 章 &nbsp; ACL</h1>
+                        <h1 class='nav-section-title' id='section-第-7-章-nbsp-nat'>
+                            第 7 章 &nbsp; NAT <a class='headerlink' href='#section-第-7-章-nbsp-nat' title='Permanent link'>↵</a>
+                        </h1>
+                        <section class="print-page" id="chapter_nat"><h1 id="chapter_nat-natnetwork-address-translation"><center class="force-page-break">NAT（Network Address Translation）</center><a class="headerlink" href="#chapter_nat-natnetwork-address-translation" title="Permanent link">&para;</a></h1>
+<p><a class="glightbox" href="../assets/covers/Image_placeholder.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="NAT" src="../assets/covers/Image_placeholder.png" /></a></p>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>NAT 如同一位巧妙的化妆师，为网络中的设备精心“化妆”。</p>
+<p>它将私有IP地址巧妙地转换为公共IP地址，让内部网络中的多个设备能够共享少量的公共IP地址，从而缓解了IPv4地址的短缺问题，确保了网络的顺畅连接。</p>
+</div></section><section class="print-page" id="chapter_nat-static_nat"><h1 id="chapter_nat-static_nat-nat-static-nat">静态 NAT (Static Nat)<a class="headerlink" href="#chapter_nat-static_nat-nat-static-nat" title="Permanent link">&para;</a></h1>
+<p><strong>nat</strong> <strong>static</strong> <strong>global</strong> <em>global-address</em> <strong>inside</strong> <em>host-address</em> : 配置私网 IP 地址和公网 IP 地址的静态映射关系。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>global</strong></td>
+<td>设置 NAT 的公网信息。</td>
+<td></td>
+</tr>
+<tr>
+<td><em>global-address</em></td>
+<td>指定 NAT 的公网 IP 地址。</td>
+<td>点分十进制格式。</td>
+</tr>
+<tr>
+<td><strong>inside</strong></td>
+<td>设置 NAT 的私网信息。</td>
+<td></td>
+</tr>
+<tr>
+<td><em>host-address</em></td>
+<td>指定 NAT 的私网 IP 地址。</td>
+<td>点分十进制格式。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="chapter_nat-static_nat-_1">使用实例<a class="headerlink" href="#chapter_nat-static_nat-_1" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#chapter_nat-static_nat-__codelineno-0-1"></a>[Huawei]int g0/0/2
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#chapter_nat-static_nat-__codelineno-0-2"></a>[Huawei-GigabitEthernet0/0/2]nat static global 202.199.184.10 inside 192.168.100.1
+</span></code></pre></div></section><section class="print-page" id="chapter_nat-dynamic_nat%26easy_ip"><h1 id="chapter_nat-dynamic_nat%26easy_ip-nat-easy-ip">动态 NAT &amp; Easy IP<a class="headerlink" href="#chapter_nat-dynamic_nat%26easy_ip-nat-easy-ip" title="Permanent link">&para;</a></h1>
+<details class="tip" open="open">
+<summary>提示</summary>
+<p>NAPT（Network Address Port Translation）技术，也称为PAT（Port Address Translation），是一种网络地址端口转换技术，主要用于解决内部网络设备通过有限的公网IP地址访问外部网络的问题‌‌。</p>
+</details>
+<h2 id="chapter_nat-dynamic_nat%26easy_ip-_1">配置命令<a class="headerlink" href="#chapter_nat-dynamic_nat%26easy_ip-_1" title="Permanent link">&para;</a></h2>
+<p><strong>nat</strong> <strong>address-group</strong> <em>group-index</em> <em>start-address</em> <em>end-address</em> : 配置NAT地址池。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>group-index</em></td>
+<td>指定NAT地址池索引号。</td>
+<td>整数形式， 取值范围是0～255。</td>
+</tr>
+<tr>
+<td><em>start-address</em></td>
+<td>指定地址池的起始地址。</td>
+<td>点分十进制格式。</td>
+</tr>
+<tr>
+<td><em>end-address</em></td>
+<td>指定地址池的结束地址。</td>
+<td>点分十进制格式。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>nat</strong> <strong>outbound</strong> <em>acl-number</em> <strong>address-group</strong> <em>group-index</em> [ <strong>no-pat</strong> ] : 用来将一个访问控制列表ACL和一个地址池关联起来，表示ACL中规定的地址可以使用地址池进行地址转换。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>参数说明</th>
+<th>取值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>acl-number</em></td>
+<td>指定访问控制列表的索引值。</td>
+<td>整数形式，取值范围是2000～3999。</td>
+</tr>
+<tr>
+<td><strong>address-group</strong> <em>group-index</em></td>
+<td>表示使用地址池的方式配置地址转换，如果不指定地址池，则直接使用该接口的IP地址作为转换后的地址，即Easy IP特性。</td>
+<td>整数形式，取值范围是0～255。</td>
+</tr>
+<tr>
+<td><strong>no-pat</strong></td>
+<td>表示使用一对一的地址转换，只转换数据报文的地址而不转换端口信息。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="chapter_nat-dynamic_nat%26easy_ip-_2">使用实例<a class="headerlink" href="#chapter_nat-dynamic_nat%26easy_ip-_2" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="../chapter_nat/dynamic_nat%26easy_ip.assets/dynamic_nat.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="dynamic_nat" src="../chapter_nat/dynamic_nat%26easy_ip.assets/dynamic_nat.png" /></a></p>
+<p>配置动态NAT，只转换地址，不转换TCP/UDP端口。</p>
+<div class="language-text highlight"><span class="filename">AR1:</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#chapter_nat-dynamic_nat%26easy_ip-__codelineno-0-1"></a>[AR1]nat address-group 1 202.1.1.1 202.1.1.5
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#chapter_nat-dynamic_nat%26easy_ip-__codelineno-0-2"></a>[AR1]acl 3000    # 也可以用基本acl
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#chapter_nat-dynamic_nat%26easy_ip-__codelineno-0-3"></a>[AR1-acl-adv-3000]rule permit ip source 192.168.1.0 0.0.0.255
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#chapter_nat-dynamic_nat%26easy_ip-__codelineno-0-4"></a>[AR1-acl-adv-3000]int g0/0/1
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#chapter_nat-dynamic_nat%26easy_ip-__codelineno-0-5"></a>[AR1-GigabitEthernet0/0/1]nat outbound 3000 address-group 1 no-pat   # 如果没有`no-pat`就是`PAT`
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#chapter_nat-dynamic_nat%26easy_ip-__codelineno-0-6"></a>[AR1]ip route-static 0.0.0.0 0 200.1.1.2    # 单出口网络，用默认路由
+</span></code></pre></div>
+<div class="language-text highlight"><span class="filename">ISP:</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#chapter_nat-dynamic_nat%26easy_ip-__codelineno-1-1"></a>[ISP]ip route-static 202.1.1.0 24 200.1.1.1    # 使用静态路由指回，当然也可以用默认路由
+</span></code></pre></div>
+<p>配置NAPT，既转换地址，又转换TCP/UDP端口。</p>
+<p><a class="glightbox" href="../chapter_nat/dynamic_nat%26easy_ip.assets/napt.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="pat" src="../chapter_nat/dynamic_nat%26easy_ip.assets/napt.png" /></a></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#chapter_nat-dynamic_nat%26easy_ip-__codelineno-2-1"></a>不想写了，先空着
+</span></code></pre></div>
+<p>配置Easy IP，使用接口的IP地址做NAT转换。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#chapter_nat-dynamic_nat%26easy_ip-__codelineno-3-1"></a>&lt;Huawei&gt; system-view
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#chapter_nat-dynamic_nat%26easy_ip-__codelineno-3-2"></a>[Huawei] acl number 2001
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#chapter_nat-dynamic_nat%26easy_ip-__codelineno-3-3"></a>[Huawei-acl-basic-2001] rule permit source 10.110.10.0 0.0.0.255
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#chapter_nat-dynamic_nat%26easy_ip-__codelineno-3-4"></a>[Huawei-acl-basic-2001] quit
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#chapter_nat-dynamic_nat%26easy_ip-__codelineno-3-5"></a>[Huawei] interface gigabitethernet 1/0/0 
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#chapter_nat-dynamic_nat%26easy_ip-__codelineno-3-6"></a>[Huawei-GigabitEthernet1/0/0] nat outbound 2001
+</span></code></pre></div></section><h1 class='nav-section-title-end'>Ended: 第 7 章 &nbsp; NAT</h1></div>
 
 <!-- Source file information -->
 
